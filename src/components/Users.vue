@@ -1,11 +1,11 @@
 <template>
   <b-table
-    :data="isEmpty ? [] : users"
-    :bordered="isBordered"
-    :striped=1
-    :narrowed="isNarrowed"
-    :loading="isLoading"
-    :mobile-cards="hasMobileCards">
+    :data="users"
+    :bordered=true
+    :striped=true
+    :narrowed=false
+    :loading=isLoading
+    :mobile-cards=true>
 
     <template scope="props">
       <b-table-column label="ID" width="40" numeric>

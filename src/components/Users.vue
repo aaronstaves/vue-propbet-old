@@ -1,11 +1,16 @@
 <template>
 
   <section>
-    <button v-on:click="editUser" class="button field is-primary"
-      :disabled="!Object.keys(selected).length">
-      <b-icon icon="edit"></b-icon>
-      <span>Edit User</span>
-    </button>
+
+    <b-field grouped group-multiline>
+      <div class="control is-flex">
+        <button v-on:click="editUser" class="button field is-primary"
+          :disabled="!Object.keys(selected).length">
+          <b-icon icon="edit"></b-icon>
+          <span>Edit User</span>
+        </button>
+      </div>
+    </b-field>
 
     <b-table
       :data="users"
@@ -15,20 +20,21 @@
       :narrowed=false
       :loading=isLoading
       :mobile-cards=true
-      :selected.sync="selected">
-
+      :selected.sync="selected"
+      default-sort="username"
+      default-sort-direction="asc">
 
       <template scope="props">
         <b-table-column label="ID" width="40" numeric>
             {{ props.row.id }}
         </b-table-column>
-        <b-table-column label="Username">
+        <b-table-column field="username" label="Username" sortable>
             {{ props.row.username }}
         </b-table-column>
-        <b-table-column label="Name">
+        <b-table-column field="name" label="Name" sortable>
             {{ props.row.name }}
         </b-table-column>
-        <b-table-column label="Email">
+        <b-table-column field="email" label="Email" sortable>
             {{ props.row.email }}
         </b-table-column>
       </template>
@@ -47,11 +53,11 @@ export default {
 
       // table params
       isLoading: true,
+      defaultSortDirection: 'asc',
       selected: {}
     }
   },
   created() {
-    console.log('created users...');
     const url = 'https://jsonplaceholder.typicode.com/users';
     axios.get(url).then(({ data }) => {
       this.isLoading = false;

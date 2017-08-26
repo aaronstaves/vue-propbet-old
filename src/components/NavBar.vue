@@ -3,11 +3,7 @@
 
     <nav class="navbar ">
       <div class="navbar-brand">
-        <router-link class="navbar-item" to="/">
-          <img src="../assets/burrito-32x32.png">
-          <span class="burrito-brand-text">allBurritos - PropBet.App</span>
-        </router-link>
-
+          <img src="../assets/burrito-64x64.png">
         <!-- mmm burger -->
         <div v-on:click="toggleBurger" v-bind:class="{'is-active':isActive}" class="navbar-burger burger" data-target="propbet-nav-menu">
           <span></span>
@@ -24,9 +20,11 @@
     </div>
 
     <div class="navbar-end">
+      <span class="burrito-brand-text">allBurritos</span>
     </div>
 
   </nav>
+  <hr>
   </section>
 </template>
 
@@ -48,6 +46,7 @@ export default {
 
 <style scoped>
 .burrito-brand-text {
-  font-family: 'Patrick Hand SC', cursive;
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
 }
 </style>

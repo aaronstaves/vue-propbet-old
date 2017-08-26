@@ -7,34 +7,6 @@
     </div>
   </section>
 </template>
-<!--
-  <div class="container" id="app">
-
-
-    <section class="hero">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            PropBet™
-          </h1>
-          <h2 class="subtitle">
-            In honor of the Superb Owl
-          </h2>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <router-link to="/">Home</router-link>
-      <router-link to="users">Users</router-link>
-    </section>
-
-    <section>
-      <router-view></router-view>
-    </section>
-  </div>
--->
-</template>
 
 <script>
 import NavBar from './components/Navbar'
@@ -45,19 +17,36 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
 
-html,
-body,
-.app-viewport {
-  height: 100%;
-  overflow: hidden;
-  margin: 0;
-}
+// Set your colors
+$primary: #B3404A;
+$primary-invert: findColorInvert($primary);
+$twitter: #4099FF;
+$twitter-invert: findColorInvert($twitter);
 
-.app-viewport {
-  display: flex;
-  flex-flow: column;
-}
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+    "white": ($white, $black),
+    "black": ($black, $white),
+    "light": ($light, $light-invert),
+    "dark": ($dark, $dark-invert),
+    "primary": ($primary, $primary-invert),
+    "info": ($info, $info-invert),
+    "success": ($success, $success-invert),
+    "warning": ($warning, $warning-invert),
+    "danger": ($danger, $danger-invert),
+    "twitter": ($twitter, $twitter-invert)
+);
 
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
 </style>

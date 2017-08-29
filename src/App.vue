@@ -22,8 +22,14 @@ export default {
 @import "~bulma/sass/utilities/_all";
 
 // Set your colors
-$primary: #B3404A;
+$primary: #B3404B;
 $primary-invert: findColorInvert($primary);
+$info: #2A746A;
+$info-invert: findColorInvert($info);
+$danger: #B97542;
+$danger-invert: findColorInvert($danger);
+$success: #489B37;
+$success-invert: findColorInvert($success);
 $twitter: #4099FF;
 $twitter-invert: findColorInvert($twitter);
 

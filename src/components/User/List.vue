@@ -67,10 +67,7 @@ export default {
   methods: {
     editUser() {
       const user = this.selected;
-      this.$toast.open({
-        message: `Editing ${user.name}`,
-        type: 'is-success'
-      });
+      this.$router.push({ name: 'UserView', params: { id: user.id }});
 
     }
   }

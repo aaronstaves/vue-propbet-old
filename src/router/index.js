@@ -2,13 +2,15 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from '@/components/Home'
-import Users from '@/components/Users'
+import UserList from '@/components/User/List'
+import UserView from '@/components/User/View'
+
 
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   routes: [
     {
       path: '/',
@@ -17,8 +19,14 @@ export default new Router({
     },
     {
       path: '/users',
-      name: 'Users',
-      component: Users
+      name: 'UserList',
+      component: UserList
+    },
+    {
+      path: '/users/:id',
+      name: 'UserView',
+      component: UserView,
+      props: true
     }
   ]
 })

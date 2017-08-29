@@ -1,11 +1,12 @@
 <template>
-  <section class="section">
+  <div class="container">
+
     <NavBar/>
 
     <div class="container">
       <router-view></router-view>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -55,4 +56,5 @@ $link-focus-border: $primary;
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
-</style>
+<style>
+

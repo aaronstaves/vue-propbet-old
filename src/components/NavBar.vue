@@ -1,6 +1,4 @@
 <template>
-  <section>
-
     <nav class="navbar ">
       <div class="navbar-brand">
           <img src="../assets/burrito-64x64.png">
@@ -15,7 +13,7 @@
     <div id="propbet-nav-menu" class="navbar-menu" v-bind:class="{'is-active': isActive}">
       <div v-on:click="toggleBurger" class="navbar-start">
         <router-link class="navbar-item" to="/">Home</router-link>
-        <router-link class="navbar-item" to="users">Users</router-link>
+        <router-link class="navbar-item" to="/users">Users</router-link>
       </div>
     </div>
 
@@ -25,7 +23,6 @@
 
   </nav>
   <hr>
-  </section>
 </template>
 
 <script>

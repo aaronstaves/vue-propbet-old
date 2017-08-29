@@ -1,4 +1,5 @@
 <template>
+	<section>
     <nav class="navbar ">
       <div class="navbar-brand">
           <img src="../assets/burrito-64x64.png">
@@ -21,8 +22,9 @@
       <span class="burrito-brand-text">allBurritos</span>
     </div>
 
-  </nav>
-  <hr>
+  	</nav>
+  	<hr>
+	</section>
 </template>
 
 <script>

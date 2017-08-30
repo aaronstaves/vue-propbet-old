@@ -44,6 +44,7 @@
 
 <script>
 import axios from 'axios';
+import fb from 'firebase';
 
 export default {
   name: 'users',

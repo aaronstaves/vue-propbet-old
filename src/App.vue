@@ -11,7 +11,7 @@
 
 <script>
 import NavBar from './components/Navbar'
-
+console.log('init');
 export default {
   name: 'app',
   components: { NavBar }
@@ -25,12 +25,14 @@ export default {
 // Set your colors
 $primary: #B3404B;
 $primary-invert: findColorInvert($primary);
+
 $info: #2A746A;
 $info-invert: findColorInvert($info);
 $danger: #B97542;
 $danger-invert: findColorInvert($danger);
 $success: #489B37;
 $success-invert: findColorInvert($success);
+
 $twitter: #4099FF;
 $twitter-invert: findColorInvert($twitter);
 
@@ -53,8 +55,8 @@ $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
 
+
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
-<style>
-
+</style>

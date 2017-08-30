@@ -4,17 +4,19 @@ import Vue from 'vue'
 import App from './App'
 
 import router from './router'
-import Buefy from 'buefy';
+import Buefy from 'buefy'
+import 'buefy/lib/buefy.css'
 import VueFire from 'vuefire'
-import Firebase from 'firebase';
+import Firebase from 'firebase'
 
 Vue.use(Buefy);
-Vue.use(VueFire)
+Vue.use(VueFire);
 
-Vue.config.fbConfig = process.env.fbConfig;
 
-const fb = Firebase.initializeApp(Vue.config.fbConfig);
-const db = fb.database();
+Vue.config.productionTip = false
+
+
+
 
 /* eslint-disable no-new */
 new Vue({
